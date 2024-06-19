@@ -4,8 +4,11 @@
 :root{
     /*COLORS*/
     --bright-orange: hsl(31, 77%, 52%);
+    --bright-orange-light: #f4cfa8;
     --dark-cyan: hsl(184, 100%, 22%);
+    --dark-cyan-light:#99c3c6;
     --very-dark-cyan: hsl(179, 100%, 13%);
+    --very-dark-cyan-light:#99b3b3;
     --transparent-white: hsla(0, 0%, 100%, 0.75);/*p*/
     --very-light-gray: hsl(0, 0%, 95%);/*bg h btn*/
     
@@ -13,14 +16,80 @@
     --font-big-sholders-display: "Big Shoulders Display", sans-serif;/*700*/
 }
 
+
+
+*, 
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html{
     font-size: 93.75%;
 }
 
+body {
+    background-color: var(--very-light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-weight: 400;
+    position:relative;
+    font-family: var(--font-lexend-deca);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.container div{
+    max-width: 17.85rem;
+     height: 30rem;
+     padding: 2.6rem;
+    display: grid;
+    grid-template-rows: 2fr 2fr 5fr 1fr;
+     
+}
+
+
+.sedans {
+    background-color: var(--bright-orange);
+    color: var(--bright-orange-light);
+    button{
+        color: var(--bright-orange);
+        
+    }
+}
+
+
+.suvs {
+    background-color: var(--dark-cyan);
+    color:var(--dark-cyan-light);
+    button{
+        color:var(--dark-cyan);
+    }
+}
+
+.luxury {
+    background-color: var(--very-dark-cyan);
+    color:var(--very-dark-cyan-light);
+    button{
+       color: var(--very-dark-cyan);
+    }
+}
+
 .attribution {
-  font-size: 11px;
-  text-align: center;
+  position: absolute;
+  bottom:0;
+  left:50%;
+  transform: translate(-50%, -50%);
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+  text-decoration: none;
 }
